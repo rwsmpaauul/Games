@@ -1,0 +1,25 @@
+    if (ball.y + ball.r >= plank.y && ball.y + ball.r <= plank.y + plank.height && ball.x + ball.r >= plank.x && ball.x + ball.r <= plank.x + plank.width) {
+        for (let c = 1; c < 5; c++) {
+            if (ball.x > plank.xmid - c * (plank.width / 10) && ball.x < plank.xmid - c + 1 * (plank.width / 10) || ball.x > plank.xmid + c * (plank.width / 10) && ball.x < plank.xmid + c + 1 * (plank.width / 10)) {
+                // ball.a = c * 0.5
+                console.log("Ablenkung: " + c)
+                break
+            }
+        }
+
+        ball.dy = ball.dy * (-1)
+        // ball.dy = (c + ball.dy) * -1
+    }
+    if (ball.y - ball.r >= plank.y && ball.y - ball.r <= plank.y + plank.height && ball.x - ball.r >= plank.x && ball.x - ball.r <= plank.x + plank.width) {
+        for (let c = 1; c < 5; c++) {
+            if (ball.x > plank.xmid - c * (plank.width / 10) && ball.x < plank.xmid - c + 1 * (plank.width / 10) || ball.x > plank.xmid + c * (plank.width / 10) && ball.x < plank.xmid + c + 1 * (plank.width / 10)) {
+                // ball.a = c * 0.5
+                console.log("Ablenkung: " + c)
+            }
+        }
+
+        ball.dy = ball.dy * (-1)
+        // ball.dy = (c + ball.dy) * -1
+    }
+
+    ^gehört zu ballHitsWall()
