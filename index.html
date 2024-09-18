@@ -29,7 +29,10 @@
     <p ontouchmove = "coords()"> test ----------------------------------------------- </p>
     <p id="output"></p>
 
-    <script src="script.js"></script>
+    <script src="script.js">coords(event){
+var x = event.touches[0].clientX;
+  document.getElementById("output").innerHTML = x;
+}</script>
 </body>
 
 </html>
