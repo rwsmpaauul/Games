@@ -29,7 +29,18 @@
     <p ontouchmove = "coords()"> test ----------------------------------------------- </p>
     <p id="output"></p>
 
-    <script src="script.js"></script>
+    <script src="script.js">function coords(event) {
+    // Holen des Touch-Objekts aus dem Event
+    const touch = event.touches[0];
+    
+    // Koordinaten der Berührung
+    const x = touch.clientX;
+    const y = touch.clientY;
+
+    // Ausgabe der Koordinaten in das HTML-Element mit der ID "output"
+    document.getElementById("output").innerHTML = `X: ${x}, Y: ${y}`;
+}
+</script>
 </body>
 
 </html>
