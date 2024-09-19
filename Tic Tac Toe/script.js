@@ -239,7 +239,7 @@ function didWin() {
         win = true;
         setTimeout(() => { location.reload(); }, 500);
     }
-    if (fieldp1[1] == true && fieldp2[4] == true && fieldp2[7] == true) {
+    if (fieldp2[1] == true && fieldp2[4] == true && fieldp2[7] == true) {
         alert(name_o + " gewinnt");
         console.log("Spieler 2 gewinnt");
         win = true;
